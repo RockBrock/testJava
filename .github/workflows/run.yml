@@ -34,4 +34,6 @@ jobs:
         run: |
           echo Add other actions to build,
           java -version
+          javac testJava.java
+          java testJava
          
