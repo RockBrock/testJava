@@ -15,7 +15,7 @@ jobs:
     steps:
     
       - name: Login to docker 
-        if: secrets.DOCKER_USERNAME && secrets.DOCKER_PASSWORD
+        if:  secrets.DOCKER_USERNAME && secrets.DOCKER_PASSWORD
         run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 
       - name: Run a multi-line script
