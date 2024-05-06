@@ -20,6 +20,11 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Run docker image
+        run:  |
+          docker run -it --rm -p 8080:8080 securecodebox/bodgeit
+          docker ps
+
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
