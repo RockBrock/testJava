@@ -25,7 +25,7 @@ jobs:
           docker pull securecodebox/bodgeit 
           docker run -d --rm -p 8080:8080 securecodebox/bodgeit
           docker ps
-          curl -s -I http://localhost:8080/bodgeit
+          curl http://localhost:8080/bodgeit
 
       - name: Run a multi-line script
         run: |
