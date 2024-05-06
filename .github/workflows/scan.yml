@@ -26,8 +26,12 @@ jobs:
           docker run -d -p 8080:8080 securecodebox/bodgeit
           docker ps
           ifconfig
-          curl http://localhost:8080
-
+          
+      - name: Perform ZAP baseline scan
+        uses: zaproxy/action-baseline@v1.2
+        with:
+          url:  http://localhost:8080/bodgeit      
+      
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
