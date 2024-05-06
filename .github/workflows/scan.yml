@@ -25,6 +25,8 @@ jobs:
           docker pull securecodebox/bodgeit 
           docker run -d -p 8080:8080 securecodebox/bodgeit
           docker ps
+          ifconfig
+          nc localhost:8080
 
       - name: Run a multi-line script
         run: |
