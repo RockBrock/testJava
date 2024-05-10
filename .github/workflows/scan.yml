@@ -30,7 +30,7 @@ jobs:
       - name: Perform ZAP baseline scan
         uses: zaproxy/action-baseline@v0.12.0
         with:
-          target: http://localhost:8080/bodgeit
+          target: '$TARGET_URL'
 
       
       - name: Run a multi-line script
