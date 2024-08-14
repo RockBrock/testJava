@@ -33,10 +33,10 @@ jobs:
 
       - name: Run docker image
         run:  |
-          docker pull sonarqube:9.9.5-community
-          docker run -d -p 9000:9000 sonarqube:9.9.5-community
-          sleep 15 &
-          curl -X POST -H "Authorization: Basic admin:admin" "http://localhost:9000/api/user_tokens/create?name=MyToken"
+          # docker pull sonarqube:9.9.5-community
+          # docker run -d -p 9000:9000 sonarqube:9.9.5-community
+          # sleep 15 &
+          # curl -X POST -H "Authorization: Basic admin:admin" "http://localhost:9000/api/user_tokens/create?name=MyToken"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
